@@ -1,4 +1,5 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using Berry.Core.Navigation;
+using Windows.UI.Xaml.Controls;
 
 namespace Berry.Core.WindowsStore
 {
@@ -6,7 +7,7 @@ namespace Berry.Core.WindowsStore
     {
         public void NavigateTo<TViewModel>(Frame navigationContext, TViewModel viewModel)
         {
-            navigationContext.Navigate(viewModel.GetType());
+            navigationContext.Navigate(typeof (TViewModel));
         }
     }
 }
