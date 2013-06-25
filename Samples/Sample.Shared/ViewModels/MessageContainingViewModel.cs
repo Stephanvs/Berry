@@ -1,7 +1,7 @@
 using System;
 using Berry.Core.ViewModels;
 
-namespace Sample.Android
+namespace Sample.Shared.ViewModels
 {
 	public class MessageContainingViewModel : ViewModelBase
 	{

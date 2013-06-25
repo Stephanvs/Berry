@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Android", "..\Sample
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.WindowsStore", "..\Samples\Sample.WindowsStore\Sample.WindowsStore.csproj", "{A0B5C2EB-1AA7-4E7A-9BE2-93248D2AD672}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Shared", "..\Samples\Sample.Shared\Sample.Shared.csproj", "{D341639A-487B-4DF2-A27C-62810EACD522}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,16 @@ Global
 		{A0B5C2EB-1AA7-4E7A-9BE2-93248D2AD672}.Release|x86.ActiveCfg = Release|x86
 		{A0B5C2EB-1AA7-4E7A-9BE2-93248D2AD672}.Release|x86.Build.0 = Release|x86
 		{A0B5C2EB-1AA7-4E7A-9BE2-93248D2AD672}.Release|x86.Deploy.0 = Release|x86
+		{D341639A-487B-4DF2-A27C-62810EACD522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D341639A-487B-4DF2-A27C-62810EACD522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D341639A-487B-4DF2-A27C-62810EACD522}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{D341639A-487B-4DF2-A27C-62810EACD522}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D341639A-487B-4DF2-A27C-62810EACD522}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D341639A-487B-4DF2-A27C-62810EACD522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D341639A-487B-4DF2-A27C-62810EACD522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D341639A-487B-4DF2-A27C-62810EACD522}.Release|ARM.ActiveCfg = Release|Any CPU
+		{D341639A-487B-4DF2-A27C-62810EACD522}.Release|x64.ActiveCfg = Release|Any CPU
+		{D341639A-487B-4DF2-A27C-62810EACD522}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,6 +140,7 @@ Global
 		{868D3292-B0BD-41EF-8C6E-70DD1FA722EC} = {4C58F8AF-6FEC-45E4-9BD5-247DFB5F2006}
 		{EF375E09-8D50-44A0-A676-C7AAF6B17F78} = {2C5C5648-8046-401A-9D6F-E780CF3FC55E}
 		{A0B5C2EB-1AA7-4E7A-9BE2-93248D2AD672} = {2C5C5648-8046-401A-9D6F-E780CF3FC55E}
+		{D341639A-487B-4DF2-A27C-62810EACD522} = {2C5C5648-8046-401A-9D6F-E780CF3FC55E}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = ..\Samples\Sample.Android\Sample.Android.csproj

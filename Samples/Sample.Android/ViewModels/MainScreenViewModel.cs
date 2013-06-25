@@ -5,6 +5,7 @@ using Berry.Core;
 using Berry.Core.Views;
 using Android.Widget;
 using Berry.Core.Android;
+using Sample.Shared.ViewModels;
 
 namespace Sample.Android
 {
