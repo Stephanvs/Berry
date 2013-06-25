@@ -101,6 +101,14 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\..\src\Berry.Core.WindowsStore\Berry.Core.WindowsStore.csproj">
+      <Project>{016d47f4-36e5-4183-96ee-59f3b4c40a9c}</Project>
+      <Name>Berry.Core.WindowsStore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Berry.Core\Berry.Core.csproj">
+      <Project>{868d3292-b0bd-41ef-8c6e-70dd1fa722ec}</Project>
+      <Name>Berry.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
