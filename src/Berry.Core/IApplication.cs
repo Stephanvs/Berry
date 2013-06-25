@@ -1,8 +1,8 @@
-﻿using System;
-
-namespace Berry.Core
+﻿namespace Berry.Core
 {
-    public interface IApplication
+    public interface IApplication<out TNavigationContext>
     {
+        TNavigationContext CurrentNavigationContext { get; }
+        //TViewModel GetViewModel<TViewModel>();
     }
 }

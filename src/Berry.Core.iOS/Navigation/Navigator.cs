@@ -5,7 +5,7 @@ namespace Berry.Core.iOS
 {
 	public class Navigator : INavigator<UIViewController>
 	{
-		void NavigateTo<TViewModel>(UIViewController navigationContext, TViewModel viewModel)
+		public void NavigateTo<TViewModel>(UIViewController navigationContext, TViewModel viewModel)
 		{
 			var viewController = viewModel as UIViewController;
 
