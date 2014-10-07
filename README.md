@@ -16,3 +16,8 @@ Xamarin currently provides the Xamarin.Mobile (http://xamarin.com/mobileapi) API
 Part of Berry's approach is being an addition to the abstractions provided by the afore mentioned Xamarin.Mobile library. Abstracting these services is one step to reduce platform specific code. 
 
 Additionally we also want to use Inversion of Control and Model View ViewModel techniques to increase code share. Therefore Berry provides Dependency Injection capabilities abstracted across platforms, as well as ViewModel bindings.
+
+Why the name Berry?
+===================
+
+No particular reason, just if you think about an actual berry (you know the fruit), they consist of small components. This is exactly what this library is all about.
