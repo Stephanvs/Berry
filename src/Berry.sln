@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{AD3EA6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Berry.Client", "Berry.Client\Berry.Client.csproj", "{88CB822B-5F47-493A-800B-4481693586D3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7E5790F6-D900-4DC7-A76D-41C026AD048E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Berry.Client.Test", "Berry.Client.Test\Berry.Client.Test.csproj", "{6482365E-1B52-465D-935E-50FFAF79239E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -155,6 +159,16 @@ Global
 		{88CB822B-5F47-493A-800B-4481693586D3}.Release|ARM.ActiveCfg = Release|Any CPU
 		{88CB822B-5F47-493A-800B-4481693586D3}.Release|x64.ActiveCfg = Release|Any CPU
 		{88CB822B-5F47-493A-800B-4481693586D3}.Release|x86.ActiveCfg = Release|Any CPU
+		{6482365E-1B52-465D-935E-50FFAF79239E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6482365E-1B52-465D-935E-50FFAF79239E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6482365E-1B52-465D-935E-50FFAF79239E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{6482365E-1B52-465D-935E-50FFAF79239E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6482365E-1B52-465D-935E-50FFAF79239E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6482365E-1B52-465D-935E-50FFAF79239E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6482365E-1B52-465D-935E-50FFAF79239E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6482365E-1B52-465D-935E-50FFAF79239E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{6482365E-1B52-465D-935E-50FFAF79239E}.Release|x64.ActiveCfg = Release|Any CPU
+		{6482365E-1B52-465D-935E-50FFAF79239E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -168,6 +182,7 @@ Global
 		{A0B5C2EB-1AA7-4E7A-9BE2-93248D2AD672} = {2C5C5648-8046-401A-9D6F-E780CF3FC55E}
 		{D341639A-487B-4DF2-A27C-62810EACD522} = {2C5C5648-8046-401A-9D6F-E780CF3FC55E}
 		{88CB822B-5F47-493A-800B-4481693586D3} = {AD3EA67F-3586-4668-9D6A-2D3CCAC8B1D5}
+		{6482365E-1B52-465D-935E-50FFAF79239E} = {7E5790F6-D900-4DC7-A76D-41C026AD048E}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = ..\Samples\Sample.Android\Sample.Android.csproj

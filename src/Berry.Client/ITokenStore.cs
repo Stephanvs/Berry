@@ -6,7 +6,7 @@ namespace Berry.Client
     {
         void StoreToken(string identifier, TokenResponse response);
         void StoreToken(string identifier, AuthorizeResponse response);
-        bool TryGetToken(string resourceName, out TokenCredential tokenCredential);
+        TokenCredential GetToken(string resourceName);
         void RemoveToken(string identifier);
     }
 }

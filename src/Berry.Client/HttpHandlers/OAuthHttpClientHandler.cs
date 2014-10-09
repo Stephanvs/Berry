@@ -12,26 +12,20 @@ namespace Berry.Client.HttpHandlers
         private readonly string _tokenIdentifier;
         private readonly ITokenStore _tokenStore;
         private readonly OAuth2Client _oAuth2Client;
-        private readonly IInvalidTokenHandler _invalidTokenHandler;
 
-        public OAuthHttpClientHandler(string tokenIdentifier, ITokenStore tokenStore, OAuth2Client oAuth2Client, IInvalidTokenHandler invalidTokenHandler)
+        
+        public OAuthHttpClientHandler(string tokenIdentifier, ITokenStore tokenStore, OAuth2Client oAuth2Client)
         {
             _tokenIdentifier = tokenIdentifier;
             _tokenStore = tokenStore;
             _oAuth2Client = oAuth2Client;
-            _invalidTokenHandler = invalidTokenHandler;
         }
 
         protected async override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            TokenCredential tokenCredential;
-            if (_tokenStore.TryGetToken(_tokenIdentifier, out tokenCredential))
-            {
-                AssignAuthenticationHeader(request, tokenCredential);
-            }
-
+            var tokenCredential = _tokenStore.GetToken(_tokenIdentifier);
+            AssignAuthenticationHeader(request, tokenCredential);
             var response = await base.SendAsync(request, cancellationToken);
-
             return await PreHandleResponseMessage(response, request, cancellationToken);
         }
 
@@ -59,24 +53,18 @@ namespace Berry.Client.HttpHandlers
 
         protected async Task<TokenCredential> RefreshAndStoreToken()
         {
-            TokenCredential tokenCredential;
-            if (_tokenStore.TryGetToken(_tokenIdentifier, out tokenCredential))
-            {
-                // AccessToken is expired -> try to refresh
-                //var oAuth2Service = new OAuth2Client(new Uri(_tokenEndPoint), "roclient", "secret");
-                var tokenResponse = await _oAuth2Client.RequestRefreshTokenAsync(tokenCredential.RefreshToken);
+            var tokenCredential = _tokenStore.GetToken(_tokenIdentifier);
 
-                if (tokenResponse.IsError)
-                {
-                    tokenCredential = null;
-                    _invalidTokenHandler.Invoke();
-                }
-                else
-                {
-                    _tokenStore.StoreToken(_tokenIdentifier, tokenResponse);
-                    _tokenStore.TryGetToken(_tokenIdentifier, out tokenCredential);
-                }
+            // AccessToken is expired -> try to refresh
+            var tokenResponse = await _oAuth2Client.RequestRefreshTokenAsync(tokenCredential.RefreshToken);
+
+            if (tokenResponse.IsError)
+            {
+                throw new InvalidRefreshTokenException(tokenResponse);
             }
+
+            _tokenStore.StoreToken(_tokenIdentifier, tokenResponse);
+            tokenCredential = _tokenStore.GetToken(_tokenIdentifier);
 
             return tokenCredential;
         }

@@ -44,6 +44,7 @@
     <Compile Include="Factories\IOAuthHttpClientFactory.cs" />
     <Compile Include="Factories\OAuthHttpClientFactory.cs" />
     <Compile Include="HttpHandlers\CredentialsHttpClientHandler.cs" />
+    <Compile Include="HttpHandlers\InvalidRefreshTokenException.cs" />
     <Compile Include="HttpHandlers\OAuthHttpClientHandler.cs" />
     <Compile Include="IInvalidTokenHandler.cs" />
     <Compile Include="ITokenStore.cs" />

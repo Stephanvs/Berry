@@ -5,6 +5,6 @@ namespace Berry.Client.Factories
 {
     public interface IOAuthHttpClientFactory
     {
-        HttpClient CreateClient(string baseAddress, string tokenIdentifier, ITokenStore tokenStore, OAuth2Client oAuth2Client, IInvalidTokenHandler invalidTokenHandler);
+        HttpClient CreateClient(string baseAddress, string tokenIdentifier, ITokenStore tokenStore, OAuth2Client oAuth2Client);
     }
 }
